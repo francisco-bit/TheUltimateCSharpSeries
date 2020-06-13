@@ -117,7 +117,7 @@ namespace ProjectPart1
             foreach(var number in lineSplitted) {
                 max = Math.Max(max, Int32.Parse(number));
             }
-            Console.WriteLine(max);
+            Console.WriteLine(max); 
 
 
         }
