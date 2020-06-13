@@ -109,17 +109,86 @@ namespace ProjectPart1
             //}
 
             //part 2-5
-            Console.WriteLine("Insert several numbers splitted by comma");
-            string line = Console.ReadLine();
-            string[] lineSplitted=line.Split(',');
-            int max = Int32.MinValue;
+            //Console.WriteLine("Insert several numbers splitted by comma");
+            //string line = Console.ReadLine();
+            //string[] lineSplitted=line.Split(',');
+            //int max = Int32.MinValue;
 
-            foreach(var number in lineSplitted) {
-                max = Math.Max(max, Int32.Parse(number));
+            //foreach(var number in lineSplitted) {
+            //    max = Math.Max(max, Int32.Parse(number));
+            //}
+            //Console.WriteLine(max); 
+
+            //Arrays and lists -----------------------
+            //part 1
+            //var namesList = new List<string>();
+            //var line = "value";
+            //while (line != "")
+            //{
+            //    Console.WriteLine("Inser a name:");
+            //    line = Console.ReadLine();
+            //    if (line != "")
+            //        namesList.Add(line);
+            //}
+
+            //switch (namesList.Count)
+            //{
+            //    case 0:
+            //        Console.WriteLine("No names were inserted");
+            //        break;
+            //    case 1:
+            //        Console.WriteLine(namesList[0] + " liked your post");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine(namesList[0]+","+namesList[1] + " liked your post");
+            //        break;
+            //    default:
+            //        Console.WriteLine(namesList[0]+", "+namesList[1]+"and other "+(namesList.Count-2).ToString()+" like your post");
+            //        break;
+            //}
+
+            //part 2
+
+            //Console.WriteLine("Inser a name");
+            //string name = Console.ReadLine();
+
+            //var charName = new char[name.Length];
+            //for (int i = 0; i < name.Length; i++)
+            //{
+            //    charName[i] = name[name.Length-i-1];
+            //}
+
+            //Console.WriteLine(charName);
+
+            //part3
+            //too common doesnt make sense to do it
+
+            //part 4
+            //var numbersList = new List<int>() { 1,1,2,3,4,5,5,7,8};
+            //foreach(var unique in numbersList.Distinct())
+            //{
+            //    Console.WriteLine(unique);
+            //}
+
+            //part 5
+            Console.WriteLine("write a list: ");
+            string listNumber = Console.ReadLine();
+            
+            if(listNumber.Length==0 || listNumber.Length < 6)
+                Console.WriteLine("Invalid list try again");
+            else
+            {
+                var stringList = listNumber.Split(',').Select(Int32.Parse).ToList();
+                stringList.Sort();
+                foreach (var number in stringList)
+                {
+                    Console.WriteLine(number);
+                }
+                
             }
-            Console.WriteLine(max); 
+            
 
-
+            
         }
     }
 }
