@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -171,24 +174,83 @@ namespace ProjectPart1
             //}
 
             //part 5
-            Console.WriteLine("write a list: ");
-            string listNumber = Console.ReadLine();
-            
-            if(listNumber.Length==0 || listNumber.Length < 6)
-                Console.WriteLine("Invalid list try again");
-            else
-            {
-                var stringList = listNumber.Split(',').Select(Int32.Parse).ToList();
-                stringList.Sort();
-                foreach (var number in stringList)
-                {
-                    Console.WriteLine(number);
-                }
-                
-            }
-            
+            //Console.WriteLine("write a list: ");
+            //string listNumber = Console.ReadLine();
 
-            
+            //if(listNumber.Length==0 || listNumber.Length < 6)
+            //    Console.WriteLine("Invalid list try again");
+            //else
+            //{
+            //    var stringList = listNumber.Split(',').Select(Int32.Parse).ToList();
+            //    stringList.Sort();
+            //    foreach (var number in stringList)
+            //    {
+            //        Console.WriteLine(number);
+            //    }
+
+            //}
+
+            //strings ----------------------
+            //part 1
+            //Console.WriteLine("Write some numbers splited by an hyfen");
+            //var numbers = Console.ReadLine();
+            //bool isConsecutive = true;
+            //int previousNumber=0;
+            //int counter = 0;
+            //foreach (var number in numbers.Split('-'))
+            //{
+            //    if (counter == 0)
+            //    {
+            //        previousNumber = Convert.ToInt32(number);
+            //    }
+            //    else
+            //    {
+            //        if (previousNumber != (Convert.ToInt32(number) - 1))
+            //        {
+            //            Console.WriteLine("Not Consecutive");
+            //            break;
+            //        }
+            //        previousNumber = Convert.ToInt32(number);
+            //    }
+            //    counter+=1;
+            //}
+            //Console.WriteLine("Consecutive numbers");
+            //Console.WriteLine(counter);
+
+            //part 2
+            //Console.WriteLine("Insert numbers");
+            //var line = Console.ReadLine();
+            //if (string.IsNullOrWhiteSpace(line))
+            //    Console.WriteLine("invalid");
+            //else
+            //{
+            //    Console.WriteLine("Finding duplicates");
+            //    List<int> newList = line.Split('-').Select(Int32.Parse).ToList();
+            //    if(newList.ToHashSet().Count!=newList.Count)
+            //        Console.WriteLine("Have duplicates");
+            //    else
+            //        Console.WriteLine("No duplicates");
+            //}
+
+            //part 3
+            //Console.WriteLine("Inser some valid time");
+            //var line = Console.ReadLine();
+            //DateTime date = DateTime.Parse(line, new CultureInfo("en-US"));
+            //if (date.Hour<=23 && date.Hour>=0 && date.Minute<=59 && date.Minute>=0)
+            //    Console.WriteLine("Valid");
+            //else
+            //{
+            //    Console.WriteLine("Invalid");
+            //}
+            //Console.WriteLine((date-date.Date));
+            //Console.WriteLine(date.Hour);
+            //Console.WriteLine(date.Minute);
+            //Console.WriteLine(date.Date);
+
+            //part 4 - not important
+
+            //part 5
+            //to be done with contains
         }
     }
 }
